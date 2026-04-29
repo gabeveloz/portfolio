@@ -1,5 +1,5 @@
 baseURL = "https://gabeveloz.github.io/portfolio/"
-title   = "Gabe the Site Reliability Engineer"
+title   = "Journey of a Site Reliability Engineer"
 languageCode = "en-us"
 theme = "hello-friend-ng"
 
@@ -68,7 +68,7 @@ disableHugoGeneratorInject = false
 
   # Home subtitle of the index page.
   #
-  homeSubtitle = "Hello Friend NG"
+  homeSubtitle = "by Gabriel Veloz"
 
   # Set a background for the homepage
   # backgroundImage = "assets/images/background.jpg"
