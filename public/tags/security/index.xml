@@ -1,21 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Gabe the SRE</title>
-    <link>http://localhost:1313/portfolio/</link>
-    <description>Recent content on Gabe the SRE</description>
+    <title>Security on Gabe the SRE</title>
+    <link>http://localhost:1313/portfolio/tags/security/</link>
+    <description>Recent content in Security on Gabe the SRE</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Wed, 29 Apr 2026 12:56:49 -0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/portfolio/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Hey, I&#39;m Gabe.</title>
-      <link>http://localhost:1313/portfolio/about/</link>
-      <pubDate>Wed, 29 Apr 2026 12:56:49 -0700</pubDate>
-      <guid>http://localhost:1313/portfolio/about/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;SRE / DevOps engineer by day. Punk drummer by night. Follower of Christ always.&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;about-me&#34;&gt;About me&lt;/h2&gt;&#xA;&lt;p&gt;I keep distributed systems alive for a living: chasing down incidents, wiring up observability, and making sure nothing pages anyone at 2am. I&amp;rsquo;m the kind of person who genuinely enjoys debugging a Kubernetes crashloop at 8am with coffee in hand.&lt;/p&gt;&#xA;&lt;p&gt;Outside of infra, I work on blast beats, dyadic guitar intervals, biking, and Muay Thai.&lt;/p&gt;</description>
-    </item>
+    <lastBuildDate>Tue, 28 Apr 2026 16:13:05 -0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/portfolio/tags/security/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Automating Security Visibility</title>
       <link>http://localhost:1313/portfolio/posts/2026/04/automating-security-visibility/</link>

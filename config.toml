@@ -1,6 +1,5 @@
 baseURL = "https://gabeveloz.github.io/portfolio/"
 title   = "Gabe the SRE"
-languageCode = "en-us"
 theme = "hello-friend-ng"
 
 PygmentsCodeFences = true
@@ -68,7 +67,7 @@ disableHugoGeneratorInject = false
 
   # Home subtitle of the index page.
   #
-  homeSubtitle = ""
+  homeSubtitle = "Automation, Observability, and everything under the Cloud"
 
   # Set a background for the homepage
   # backgroundImage = "assets/images/background.jpg"
@@ -107,7 +106,7 @@ disableHugoGeneratorInject = false
   #
   # Enables the global language menu.
   #
-  enableGlobalLanguageMenu = true
+  enableGlobalLanguageMenu = false
 
   # Integrate Javascript files or stylesheets by adding the url to the external assets or by
   # linking local files with their path relative to the static folder, e.g. "css/styles.css"
@@ -231,26 +230,13 @@ disableHugoGeneratorInject = false
     name = "linkedin"
     url  = "https://www.linkedin.com/in/gabrielveloz"
 
-[languages]
-  [languages.en]
-    weight    = 1
-    copyright = ''
-  [languages.en.params]
-    subtitle  = "Hello Friend NG Theme"
-
 [menu]
   [[menu.main]]
     identifier  = "about"
     name        = "About"
     url         = "about/"
-    hasChildren = true
+    hasChildren = false
   
-  [[menu.main]]
-    identifier  = "me"
-    name        = "About Me"
-    url         = "about/me/"
-    parent      = "about"
-
   [[menu.main]]
     identifier = "posts"
     name       = "Posts"
