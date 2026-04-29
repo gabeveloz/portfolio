@@ -1,5 +1,5 @@
 baseURL = "https://gabeveloz.github.io/portfolio/"
-title   = "Hello Friend NG"
+title   = "Gabe the Site Reliability Engineer"
 languageCode = "en-us"
 theme = "hello-friend-ng"
 
@@ -126,7 +126,7 @@ disableHugoGeneratorInject = false
   # If you want, you can easily override the default footer with your own content. 
   #
   [params.footer]
-    trademark = 2023
+    trademark = 2026
     rss = true
     copyright = true
     author = true
@@ -226,24 +226,12 @@ disableHugoGeneratorInject = false
   # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
   #
   [[params.social]]
-    name = "twitter"
-    url  = "https://twitter.com/"
-
-  [[params.social]]
-    name = "email"
-    url  = "mailto:nobody@example.com"
-
-  [[params.social]]
     name = "github"
-    url  = "https://github.com/"
+    url  = "https://github.com/gabeveloz"
 
   [[params.social]]
     name = "linkedin"
-    url  = "https://www.linkedin.com/"
-
-  [[params.social]]
-    name = "stackoverflow"
-    url  = "https://www.stackoverflow.com/"
+    url  = "https://www.linkedin.com/in/gabrielveloz"
 
 [languages]
   [languages.en]
