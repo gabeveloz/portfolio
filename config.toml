@@ -68,7 +68,7 @@ disableHugoGeneratorInject = false
 
   # Home subtitle of the index page.
   #
-  homeSubtitle = "by Gabriel Veloz"
+  homeSubtitle = ""
 
   # Set a background for the homepage
   # backgroundImage = "assets/images/background.jpg"
@@ -120,7 +120,7 @@ disableHugoGeneratorInject = false
   # plausibleScriptSource = 'https://plausible.io/js/script.js'
 
   [params.author]
-    name = "Jane Doe"
+    name = "by Gabriel Veloz"
 
   # Custom footer 
   # If you want, you can easily override the default footer with your own content. 
@@ -236,14 +236,8 @@ disableHugoGeneratorInject = false
 [languages]
   [languages.en]
     weight    = 1
-    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+    copyright = ''
   [languages.en.params]
-    subtitle  = "Hello Friend NG Theme"
-
-  [languages.fr]
-    weight    = 2
-    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
-  [languages.fr.params]
     subtitle  = "Hello Friend NG Theme"
 
 [menu]
