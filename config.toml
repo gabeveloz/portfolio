@@ -1,5 +1,5 @@
 baseURL = "https://gabeveloz.github.io/portfolio/"
-title   = "Journey of a Site Reliability Engineer"
+title   = "Journey of an SRE"
 languageCode = "en-us"
 theme = "hello-friend-ng"
 
