@@ -1,5 +1,5 @@
 baseURL = "https://gabeveloz.github.io/portfolio/"
-title   = "kubectl describe gabe"
+title   = "Everything under the Cloud"
 theme = "hello-friend-ng"
 
 PygmentsCodeFences = true
@@ -67,7 +67,7 @@ disableHugoGeneratorInject = false
 
   # Home subtitle of the index page.
   #
-  homeSubtitle = "Everything under the Cloud"
+  homeSubtitle = ""
 
   # Set a background for the homepage
   # backgroundImage = "assets/images/background.jpg"
@@ -94,7 +94,7 @@ disableHugoGeneratorInject = false
   # generate the buttons here: https://sharingbuttons.io
   # and add them into your own `layouts/partials/sharing-buttons.html`
   #
-  enableSharingButtons = true
+  enableSharingButtons = false
 
   # Reading time
   #
@@ -143,7 +143,7 @@ disableHugoGeneratorInject = false
 
   [params.logo]
     logoMark     = ">"
-    logoText     = "$ cd /home/"
+    logoText     = "$ kubectl describe gabe"
     logoHomeLink = "/"
     # Set true to remove the logo cursor entirely.
     # logoCursorDisabled = false

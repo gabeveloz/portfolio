@@ -9,15 +9,39 @@ tags:
   - State Management
   - Github Actions 
 ---
-For a while, our backend ran on a single Terraform state file. One file, four environments, hundreds of AWS resources all crammed together. And honestly? It worked. Until it didn't.
+## The Problem
  
-The problem with monolithic state isn't that it breaks immediately. It's that it quietly accumulates risk. Every `terraform plan` refreshes your entire infrastructure across every environment at once. Every `terraform apply` is one misread output away from touching production when you meant to change dev. There's no blast radius control. There's no safety net. It's just one big trust fall with your cloud account.
+One state file. Four environments. Hundreds of AWS resources all crammed together. And for a while, it worked fine. Until it didn't.
  
-So we split it. Four environments, four independent state files, each in its own S3 key. Dev, staging, preview, and production all isolated from each other. Production even lives in a completely separate AWS account, so the isolation isn't just logical, it's physical.
+The problem with monolithic state isn't that it breaks immediately. It quietly accumulates risk. Every `terraform plan` refreshes your entire infrastructure across every environment at once. Every `terraform apply` is one misread output away from touching production when you only meant to change dev. There's no blast radius control. No safety net. Just one big trust fall with your cloud account.
  
-The migration was the interesting part. Real infrastructure was already running in all four environments, so nothing could be created or destroyed. The target was a clean plan: X imports, 0 adds, 0 changes, 0 destroys. We used import blocks in code instead of running imperative commands manually, which made the whole thing reviewable and version-controlled.
+Not ideal.
  
-We also wired everything into a CI workflow. The wrong-init footgun, planning against the wrong state because you forgot to re-init, is now impossible to hit because the pipeline handles it automatically. Plan is open to the team. Apply is locked down.
+## How I Fixed It
  
-The biggest thing I took from this: Terraform state is a contract. Treat it like one.
+We split it. Four environments, four independent state files, each in its own S3 key. Dev, staging, preview, and production all isolated from each other. Production even lives in a completely separate AWS account so the isolation is physical, not just logical.
+ 
+The migration was where things got interesting. Real infrastructure was already running in all four environments so nothing could be created or destroyed. The target was a clean plan: X imports, 0 adds, 0 changes, 0 destroys. We used import blocks in code instead of running imperative commands manually, which made the whole thing reviewable and version controlled.
+ 
+At one point I ran a plan against the wrong state because I forgot to re-init after switching environments. The result was a plan showing 35 resources to add and 93 to destroy. Hit Ctrl+C fast enough, no damage done. But that feeling of almost wrecking a real environment because of one missed command stuck with me.
+ 
+We wired everything into a CI workflow after that. Re-init happens automatically now. Plan is open to the team. Apply is locked down to one person.
+ 
+## Why It Actually Works
+ 
+Before the split, every Terraform operation was implicitly a platform-wide operation. You couldn't change dev without Terraform being aware of prod. That's not isolation, that's just hoping nothing goes wrong.
+ 
+Now each environment is its own contract. A plan against staging only knows about staging. An apply against dev cannot touch prod. That boundary is what makes it safe to actually move fast.
+ 
+## What Changed
+ 
+Blast radius: Changes are scoped to one environment. A mistake in dev stays in dev.
+ 
+Confidence: The team can run plans freely without worrying about accidentally refreshing production state.
+ 
+Safety: The wrong-init footgun is automated away. The pipeline handles re-init so no one has to remember.
+ 
+Clarity: Smaller state files are easier to reason about. You only see what belongs to that environment.
+ 
+The real win is that Terraform state is a contract and splitting it means each environment gets its own. That's the whole difference.
  
