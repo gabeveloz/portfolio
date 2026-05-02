@@ -2,8 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/portfolio/tags/github-actions/</loc>
+    <lastmod>2026-05-01T17:09:00-07:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/portfolio/</loc>
-    <lastmod>2026-04-29T12:56:49-07:00</lastmod>
+    <lastmod>2026-05-01T17:09:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/portfolio/posts/2026/05/monolithic-terraform-state-is-a-trap/</loc>
+    <lastmod>2026-05-01T17:09:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/portfolio/posts/</loc>
+    <lastmod>2026-05-01T17:09:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/portfolio/tags/state-management/</loc>
+    <lastmod>2026-05-01T17:09:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/portfolio/tags/</loc>
+    <lastmod>2026-05-01T17:09:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/portfolio/tags/terraform/</loc>
+    <lastmod>2026-05-01T17:09:00-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/portfolio/about/</loc>
     <lastmod>2026-04-29T12:56:49-07:00</lastmod>
@@ -11,16 +29,7 @@
     <loc>http://localhost:1313/portfolio/posts/2026/04/automating-security-visibility/</loc>
     <lastmod>2026-04-28T16:13:05-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/portfolio/tags/github-actions/</loc>
-    <lastmod>2026-04-28T16:13:05-07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/portfolio/posts/</loc>
-    <lastmod>2026-04-28T16:13:05-07:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/portfolio/tags/security/</loc>
-    <lastmod>2026-04-28T16:13:05-07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/portfolio/tags/</loc>
     <lastmod>2026-04-28T16:13:05-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/portfolio/categories/</loc>

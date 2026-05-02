@@ -1,5 +1,5 @@
 baseURL = "https://gabeveloz.github.io/portfolio/"
-title   = "Gabe the SRE"
+title   = "kubectl describe gabe"
 theme = "hello-friend-ng"
 
 PygmentsCodeFences = true
@@ -67,7 +67,7 @@ disableHugoGeneratorInject = false
 
   # Home subtitle of the index page.
   #
-  homeSubtitle = "Automation, Observability, and everything under the Cloud"
+  homeSubtitle = "Everything under the Cloud"
 
   # Set a background for the homepage
   # backgroundImage = "assets/images/background.jpg"

@@ -1,27 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Github Actions on kubectl describe gabe</title>
-    <link>http://localhost:1313/portfolio/tags/github-actions/</link>
-    <description>Recent content in Github Actions on kubectl describe gabe</description>
+    <title>Terraform on kubectl describe gabe</title>
+    <link>http://localhost:1313/portfolio/tags/terraform/</link>
+    <description>Recent content in Terraform on kubectl describe gabe</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
     <lastBuildDate>Fri, 01 May 2026 17:09:00 -0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/portfolio/tags/github-actions/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/portfolio/tags/terraform/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Monolithic Terraform State Is a Trap</title>
       <link>http://localhost:1313/portfolio/posts/2026/05/monolithic-terraform-state-is-a-trap/</link>
       <pubDate>Fri, 01 May 2026 17:09:00 -0700</pubDate>
       <guid>http://localhost:1313/portfolio/posts/2026/05/monolithic-terraform-state-is-a-trap/</guid>
       <description>&lt;p&gt;For a while, our backend ran on a single Terraform state file. One file, four environments, hundreds of AWS resources all crammed together. And honestly? It worked. Until it didn&amp;rsquo;t.&lt;/p&gt;&#xA;&lt;p&gt;The problem with monolithic state isn&amp;rsquo;t that it breaks immediately. It&amp;rsquo;s that it quietly accumulates risk. Every &lt;code&gt;terraform plan&lt;/code&gt; refreshes your entire infrastructure across every environment at once. Every &lt;code&gt;terraform apply&lt;/code&gt; is one misread output away from touching production when you meant to change dev. There&amp;rsquo;s no blast radius control. There&amp;rsquo;s no safety net. It&amp;rsquo;s just one big trust fall with your cloud account.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Automating Security Visibility</title>
-      <link>http://localhost:1313/portfolio/posts/2026/04/automating-security-visibility/</link>
-      <pubDate>Tue, 28 Apr 2026 16:13:05 -0700</pubDate>
-      <guid>http://localhost:1313/portfolio/posts/2026/04/automating-security-visibility/</guid>
-      <description>&lt;h2 id=&#34;the-problem&#34;&gt;The Problem&lt;/h2&gt;&#xA;&lt;p&gt;So our team was shipping code constantly, but we had no real way to know if critical vulnerabilities were in it. Scanning was this manual thing that happened randomly—basically whenever someone remembered to do it. You&amp;rsquo;d find out about issues weeks later, or the worst case, right before you needed to deploy something.&lt;/p&gt;&#xA;&lt;p&gt;Not ideal.&lt;/p&gt;&#xA;&lt;h2 id=&#34;how-i-built-it&#34;&gt;How I Built It&lt;/h2&gt;&#xA;&lt;p&gt;I set up three workflows that talk to each other. Here&amp;rsquo;s how it works:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

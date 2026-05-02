@@ -1,13 +1,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Posts on Gabe the SRE</title>
+        <title>Posts on kubectl describe gabe</title>
         <link>http://localhost:1313/portfolio/posts/</link>
-        <description>Recent content in Posts on Gabe the SRE</description>
+        <description>Recent content in Posts on kubectl describe gabe</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-        <lastBuildDate>Tue, 28 Apr 2026 16:13:05 -0700</lastBuildDate>
+        <lastBuildDate>Fri, 01 May 2026 17:09:00 -0700</lastBuildDate>
         <atom:link href="http://localhost:1313/portfolio/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Monolithic Terraform State Is a Trap</title>
+            <link>http://localhost:1313/portfolio/posts/2026/05/monolithic-terraform-state-is-a-trap/</link>
+            <pubDate>Fri, 01 May 2026 17:09:00 -0700</pubDate>
+            
+            <guid>http://localhost:1313/portfolio/posts/2026/05/monolithic-terraform-state-is-a-trap/</guid>
+            <description>&lt;p&gt;For a while, our backend ran on a single Terraform state file. One file, four environments, hundreds of AWS resources all crammed together. And honestly? It worked. Until it didn&amp;rsquo;t.&lt;/p&gt;
+&lt;p&gt;The problem with monolithic state isn&amp;rsquo;t that it breaks immediately. It&amp;rsquo;s that it quietly accumulates risk. Every &lt;code&gt;terraform plan&lt;/code&gt; refreshes your entire infrastructure across every environment at once. Every &lt;code&gt;terraform apply&lt;/code&gt; is one misread output away from touching production when you meant to change dev. There&amp;rsquo;s no blast radius control. There&amp;rsquo;s no safety net. It&amp;rsquo;s just one big trust fall with your cloud account.&lt;/p&gt;</description>
+            <content type="html"><![CDATA[<p>For a while, our backend ran on a single Terraform state file. One file, four environments, hundreds of AWS resources all crammed together. And honestly? It worked. Until it didn&rsquo;t.</p>
+<p>The problem with monolithic state isn&rsquo;t that it breaks immediately. It&rsquo;s that it quietly accumulates risk. Every <code>terraform plan</code> refreshes your entire infrastructure across every environment at once. Every <code>terraform apply</code> is one misread output away from touching production when you meant to change dev. There&rsquo;s no blast radius control. There&rsquo;s no safety net. It&rsquo;s just one big trust fall with your cloud account.</p>
+<p>So we split it. Four environments, four independent state files, each in its own S3 key. Dev, staging, preview, and production all isolated from each other. Production even lives in a completely separate AWS account, so the isolation isn&rsquo;t just logical, it&rsquo;s physical.</p>
+<p>The migration was the interesting part. Real infrastructure was already running in all four environments, so nothing could be created or destroyed. The target was a clean plan: X imports, 0 adds, 0 changes, 0 destroys. We used import blocks in code instead of running imperative commands manually, which made the whole thing reviewable and version-controlled.</p>
+<p>We also wired everything into a CI workflow. The wrong-init footgun, planning against the wrong state because you forgot to re-init, is now impossible to hit because the pipeline handles it automatically. Plan is open to the team. Apply is locked down.</p>
+<p>The biggest thing I took from this: Terraform state is a contract. Treat it like one.</p>
+]]></content>
+        </item>
         
         <item>
             <title>Automating Security Visibility</title>
