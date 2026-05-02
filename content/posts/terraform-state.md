@@ -1,5 +1,5 @@
 ---
-title: "Monolithic Terraform State Is a Trap"
+title: "Monolithic Terraform Is a Trap"
 date: 2026-05-01T17:09:00-07:00
 draft: false 
 toc: false
